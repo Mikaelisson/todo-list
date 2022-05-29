@@ -18,8 +18,14 @@ db.once("error", ()=>{
 
 
 
-app.get('/', (req, res)=>{
-    res.send("Hello World");
+app.get('/', async (req, res)=>{
+
+    try {
+        let doc = await List.find({});
+        res.send("Hello World");
+    } catch (error) {
+        res.send(error);
+    }
 });
 
 app.post('/', async (req, res)=>{
@@ -27,12 +33,12 @@ app.post('/', async (req, res)=>{
     let list = new List({
         title: "Titulo",
         description: "Descrição"
-    })
+    });
     try {
-        let doc = await list.save()
-        res.send(doc)
+        let doc = await list.save();
+        res.send(doc);
     } catch (error) {
-        res.send(error)
+        res.send(error);
     }
 })
 
