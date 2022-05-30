@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
+const path = require('path');
 const PORT = 3000;
 const mongoose = require("mongoose");
-const List = require('./models/List')
+const List = require('./models/List');
 
 mongoose.connect('mongodb://localhost/list')
 
@@ -17,6 +18,9 @@ db.once("error", ()=>{
 })
 
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
+
 
 app.get('/', async (req, res)=>{
 
@@ -26,7 +30,7 @@ app.get('/', async (req, res)=>{
         console.log('=========Listando todas anotações=========');
         console.log(doc);
         console.log('==================================');
-        res.send(doc);
+        res.render('index', {doc})
     } catch (error) {
         res.send(error);
     }
