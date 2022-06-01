@@ -25,8 +25,8 @@ Você precisará instalar as seguintes dependências na sua IDE:
 - Instalar as dependências na pasta raiz
 
 Abra o terminal na pasta raiz, copie e cole o código abaixo 🔽
-- npm install express ejs mongoose
-
+- *npm install express ejs mongoose*
+- Após a instalação incie com *node app.js*
 #
 
 ⚠️ Se houver algum erro, instale as dependências separadamente:
