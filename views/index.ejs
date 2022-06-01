@@ -11,9 +11,9 @@
     
     <%- include('partials/header')%>
 
-    <main class="d-flex flex-row flex-wrap justify-content-evenly">
+    <main class="d-flex flex-row flex-wrap justify-content-evenly p-2">
         <%for(let i = 0; i < doc.length; i++){%>
-            <form action="/delete/<%=doc[i]._id%>" method="POST" class="container card p-2 w-25 m-1">
+            <form action="/delete/<%=doc[i]._id%>" method="POST" class="container card p-2 m-1">
                 <h2 class="fs-4"><%=doc[i].title%></h2>
                 <p class="fs-6"><%=doc[i].description%></p>
                 <input name="id" value="<%=doc[i]._id%>" hidden>

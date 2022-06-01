@@ -88,7 +88,7 @@ app.post('/edit/:id', express.urlencoded({extended: true}), async (req, res)=>{
         res.send(error);
     }
 })
-app.post('/delete/:id', express.urlencoded({extends: true}), async (req, res)=>{
+app.post('/delete/:id', express.urlencoded({extended: true}), async (req, res)=>{
 
     let id = req.params.id;
     if(!id){
@@ -108,4 +108,5 @@ app.post('/delete/:id', express.urlencoded({extends: true}), async (req, res)=>{
 
 })
 
+ 
 app.listen(PORT, ()=>{console.log("Server rodando na porta", PORT)});
