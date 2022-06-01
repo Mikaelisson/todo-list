@@ -19,7 +19,12 @@ Você precisará instalar as seguintes dependências na sua IDE:
 
 ## ⚙️ Instalação
 
-Copie o código abaixo 🔽
+- Baixe os arquivos da branch master
+- Abra o na sua IDE (editor de código)
+#
+- Instalar as dependências na pasta raiz
+
+Abra o terminal na pasta raiz, copie e cole o código abaixo 🔽
 - npm install express ejs mongoose
 
 #
@@ -31,6 +36,8 @@ Copie os códigos abaixo 🔽
 - npm install express 
 - npm install ejs 
 - npm install mongoose
+
+- ⚠️ Se o erro persistir, entre em contato: https://mikaelisson.github.io/portfolio/public
 
 
 ##
