@@ -22,6 +22,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use('/', router)
+app.use('/styles', express.static(path.resolve(__dirname, 'views', 'styles')));
+app.use('/scripts', express.static(path.resolve(__dirname, 'views', 'scripts')));
 
 
 

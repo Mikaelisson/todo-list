@@ -6,7 +6,7 @@ router.get('/', async (req, res)=>{
 
     try {
         let doc = await List.find({});
-        doc.reverse()
+        doc.reverse();
         res.render('index', {doc});
     } catch (error) {
         res.send(error);
@@ -82,11 +82,7 @@ router.post('/delete/:id', express.urlencoded({extended: true}), async (req, res
     }
 
     try {        
-        let doc = await List.findByIdAndRemove(id);        
-        console.log('=========IMPRESSÃO DO DOC=========');
-        console.log('=========Documento deletado com sucesso=========');
-        console.log(doc);
-        console.log('==================================');
+        await List.findByIdAndRemove(id);
         res.redirect('/');
     } catch (error) {
         res.send(error);
