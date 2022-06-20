@@ -19,3 +19,17 @@
         left: 0;
     }
 }
+
+
+.btn-anim-shadow{
+    animation: footer-anim .5s infinite alternate;
+}
+
+@keyframes footer-anim {
+    0%{
+        box-shadow: #0dcaf0 0 0 5px;
+    }
+    100%{
+        box-shadow: #0dcaf0 0 0 10px;
+    }
+}

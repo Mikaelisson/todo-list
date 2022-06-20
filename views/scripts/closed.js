@@ -10,6 +10,5 @@ document.addEventListener("DOMContentLoaded", () => {
   function closedActive () {
     infoDiv.classList.toggle('desative');
     infoDiv.classList.toggle('act');
-    console.log('click')
   }
 });
